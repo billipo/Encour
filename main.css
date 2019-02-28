@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+:root {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    /* put color variables here */
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    /* width: 100vw; */
+    }
+h1 {
+    font-family: 'Ubuntu';
+    font-size: 2.5rem;
+    font-weight: 100;
+    text-align: center;
+    margin: 0;
+    padding: 2vh;
+    box-shadow: 1px 0 6px black;
+}    
+.content {
+    position: relative;
+    margin: 1vh 2vh;
+    padding: 0;
+}
+#thread {
+    position: relative;
+    display: block;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    height: 100vh;
+}
+#messages {
+    position: relative;
+    display: none;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    height: 100vh;
+}
+ul {
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
