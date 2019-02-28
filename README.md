@@ -1,2 +1,2 @@
-# EncourageMe
+# ENCOUR
 MVP with BoroDev group
