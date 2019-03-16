@@ -16,10 +16,10 @@ html {
 } */
 
 body {
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     border: 0;
-    /* width: 100vw; */
+    background: #EDF5F9;
     }
 h1 {
     width: 101vw;
@@ -29,7 +29,19 @@ h1 {
     text-align: center;
     margin: 0;
     padding: 2vh;
+    z-index: 999;
     box-shadow: 1px 0 6px black;
+    transition: all 500ms ease-in;
+}
+.splash {
+    position: absolute;
+    background: #EDF5F9;
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    padding: 40vh 0;
+    box-shadow: none;
+    transition: all 500ms ease-out;
 }    
 .content {
     position: relative;
@@ -39,7 +51,7 @@ h1 {
 #thread {
     position: relative;
     display: block;
-    z-index: 999;
+    z-index: 2;
     top: 0;
     left: 0;
     height: 100vh;
