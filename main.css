@@ -11,9 +11,9 @@ html {
     box-sizing: border-box;
 }
 
-*, *:before, *:after {
+/* *, *:before, *:after {
     box-sizing: border-box;
-}
+} */
 
 body {
     margin: 0 auto;
@@ -22,6 +22,7 @@ body {
     /* width: 100vw; */
     }
 h1 {
+    width: 101vw;
     font-family: 'Quicksand', 'Roboto', sans-serif;
     font-size: 2.5rem;
     font-weight: 300;
@@ -43,20 +44,14 @@ h1 {
     left: 0;
     height: 100vh;
 }
-#messages {
-    position: relative;
-    display: none;
-    z-index: 0;
-    top: 0;
-    left: 0;
-    height: 100vh;
-}
+
+/* Thread styling */
 ul {
     padding: 0;
     display: flex;
     flex-direction: column;
 }
-li {
+#thread li {
    text-align: center;
    display: flex;
    justify-content: space-between;
@@ -84,3 +79,41 @@ h2 {
     height: 1.2rem;
     float: right;
 }
+
+/* Message styling */
+#messages {
+    position: relative;
+    display: none;
+    flex-direction: column;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    height: 100vh;
+}
+.msg {
+    margin: 4vh 2vw;
+    padding: 4vw;
+    display: flex;
+    align-items: center;
+    box-shadow: 1px 0 3px #00000022;
+    flex-wrap: wrap;
+    font-size: 1.2rem; 
+}
+.msg-mine {
+    text-align: left;
+    padding-right: 40vw;
+    background-color: #74CFEC;
+    border-radius: 8px;
+}
+/* .msg-mine div {
+    background-color: #74CFEC;
+} */
+.msg-theirs {
+    text-align: right;
+    padding-left: 40vw;
+    background-color: #88C987;
+    border-radius: 8px;
+}
+/* .msg-mine div {
+    background-color: #88C987;
+} */
