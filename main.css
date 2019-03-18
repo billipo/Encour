@@ -101,31 +101,28 @@ h2 {
     top: 0;
     left: 0;
     height: 100vh;
+    padding-bottom: 4vh;
 }
 .msg {
     margin: 4vh 2vw;
     padding: 4vw;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     box-shadow: 1px 0 3px #00000022;
     flex-wrap: wrap;
     font-size: 1.2rem; 
 }
 .msg-mine {
     text-align: left;
-    padding-right: 40vw;
+    align-self: flex-start;
+    margin-right: 30vw;
     background-color: #74CFEC;
     border-radius: 8px;
 }
-/* .msg-mine div {
-    background-color: #74CFEC;
-} */
 .msg-theirs {
     text-align: right;
-    padding-left: 40vw;
+    align-self: flex-end;
+    margin-left: 30vw;
     background-color: #88C987;
     border-radius: 8px;
 }
-/* .msg-mine div {
-    background-color: #88C987;
-} */
