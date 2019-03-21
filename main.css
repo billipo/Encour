@@ -126,3 +126,9 @@ h2 {
     background-color: #88C987;
     border-radius: 8px;
 }
+svg .st-mine {
+    fill: #74D0ED;
+}
+svg .st-theirs {
+    fill: #88C987;
+}
