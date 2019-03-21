@@ -1,0 +1,22 @@
+{
+  "name": "encour",
+  "version": "1.0.0",
+  "description": "MVP with BoroDev group",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/billipo/Encour.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/billipo/Encour/issues"
+  },
+  "homepage": "https://github.com/billipo/Encour#readme",
+  "dependencies": {
+    "firebase": "^5.9.0"
+  }
+}
