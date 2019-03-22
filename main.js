@@ -10,7 +10,7 @@ window.onload = () => {
 
 thread.addEventListener('click', () => {
    
-   messages.style.display = "block";     
+   messages.style.display = "flex";     
    thread.style.display = "none";     
    messages.style.zIndex = 999;
    thread.style.zIndex = 0;
