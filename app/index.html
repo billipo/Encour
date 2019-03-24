@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Firebase App is always required and must be first -->
-    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
-    <!-- Add firebase services -->
-    <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-messaging.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-functions.js"></script>
-    <!--Initialize firebase-->
-    <script src="/__/firebase/init.js"></script>
-    
+       
+     <!-- Firebase App is always required and must be first -->
+     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+     <!-- Add firebase services -->
+     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+     <!--Initialize firebase-->
+     <script src="/__/firebase/init.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+     <script>
+       // Initialize Firebase
+       var config = {
+         apiKey: "AIzaSyCSYcQkabRrVNxUF4AqcinBQ5DHuqOja1E",
+         authDomain: "encour-7fc2b.firebaseapp.com",
+         databaseURL: "https://encour-7fc2b.firebaseio.com",
+         projectId: "encour-7fc2b",
+         storageBucket: "encour-7fc2b.appspot.com",
+         messagingSenderId: "403920884130"
+       };
+       firebase.initializeApp(config);
+     </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -38,8 +50,25 @@
     <title>ENCOUR App</title>
 </head>
 <body>
-    <h1 class="splash">ENCOUR</h1>
+    <!--<h1 class="splash">ENCOUR</h1>-->
     <div class="content">
+        <div id="validation">
+            <form>
+                Email:<br>
+                <input type="text" id="email"><br>
+                Password:<br>
+                <input type="text" id="password"><br><br>
+                <button id="btnLogIn">
+                    Log In
+                </button>
+                <button id="btnSignUp">
+                    Sign Up
+                </button>
+                <button id="btnLogOut">
+                    Log Out 
+                </button>
+            <div id="usr">None</div>
+        </div>
         <div id="thread">
             <ul>
                 <!-- Will be deleted once there is data to inject -->
@@ -61,26 +90,15 @@
             </ul>
         </div>
         <div id="messages">
-            Message thread will show on this page    
-        </div>
-        <div id="newGoalView">
-            <!-- Trigger/Open The Modal -->
-        
+             <ul>
+                <li class="msg msg-mine">You can do it! Brushing and flossing before 9:00 promotes peaceful sleep. (I may have made that up)</li>
+                <li class="msg msg-theirs">I struggled but it's done. Thanks.</li>
+                <li class="msg msg-mine">I hope you have had a good day so far. Give those pearly whites some care and you'll thank yourself.</li>
+                <li class="msg msg-theirs">Sorry, for the delay. Thanks, thanks, thanks.</li>
+            </ul>
         </div>
     </div>
-    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
-    <script>
-        //initialize firebase
-        var config = {
-        apiKey: "AIzaSyCSYcQkabRrVNxUF4AqcinBQ5DHuqOja1E",
-        authDomain: "encour-7fc2b.firebaseapp.com",
-        databaseURL: "https://encour-7fc2b.firebaseio.com",
-        projectId: "encour-7fc2b",
-        storageBucket: "encour-7fc2b.appspot.com",
-        messagingSenderId: "403920884130"
-        };
-        firebase.initializeApp(config);
-    </script>
     <script src="main.js" async defer></script>
+    <script src="authentication.js" async defer></script>
 </body>
 </html>
