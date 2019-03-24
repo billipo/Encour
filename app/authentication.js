@@ -5,11 +5,13 @@ const btnSignUp = document.getElementById('btnSignUp');
 const btnLogIn = document.getElementById('btnLogIn');
 const btnLogOut = document.getElementById('btnLogOut');
 const account;
+const reciever;
+const text;
 var db = firebase.firestore();
 db.collection("users").add({
-    first: "Ada",
-    last: "Lovelace",
-    born: 1815
+    to: reciever,
+    from: account,
+    message: test
 })
 .then(function(docRef) {
     console.log("Document written with ID: ", docRef.id);
