@@ -1,4 +1,4 @@
-const thread = document.getElementById('thread');
+const thread = document.getElementById('thread').querySelector('li');
 const messages = document.getElementById('messages');
 const btnSignUp = document.getElementById('btnSignUp');
 const btnLogIn = document.getElementById('btnLogIn');
@@ -32,6 +32,14 @@ messages.addEventListener('click', () => {
    thread.style.zIndex = 999;
    messages.style.zIndex = 0;
 });
+
+const newGoalBtn = document.getElementById('new-goal-btn');
+const newGoalForm = document.getElementById('new-goal-form');
+
+newGoalBtn.addEventListener('click', () => {
+  newGoalForm.classList.toggle('show');
+  console.log(newGoalForm);
+})
 
 
 
