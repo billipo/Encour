@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/billipo/Encour#readme",
   "dependencies": {
-    "firebase": "^5.9.0"
+    "firebase": "^5.9.1",
+    "http-server": "^0.11.1"
   }
 }

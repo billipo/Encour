@@ -1,11 +1,7 @@
 const thread = document.getElementById('thread');
 const messages = document.getElementById('messages');
 const btnSignUp = document.getElementById('btnSignUp');
-const btnLogIn = document.getElementById('btnLogIn');
-const btnLogOut = document.getElementById('btnLogOut');
-
-const auth = firebase.auth();
-
+const authentication = document.getElementById('auth');
 window.onload = () => {
   setTimeout(()=> {
     let e = document.querySelector('.splash');
@@ -30,10 +26,24 @@ messages.addEventListener('click', () => {
    messages.style.zIndex = 0;
 });
 
+var dataBase = firebase.firestore();
 
+auth.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = document.getElementById('email').value;
 
-
-
+    dataBase.collection('users').doc(email).get()
+    .then(function(doc){
+      if(doc.exists){
+        alert('oops you already have an account!')
+      }
+      else{
+        dataBase.collection('users').doc(email).set({
+          id: email
+        });
+      }
+    })
+});
 
 
 
