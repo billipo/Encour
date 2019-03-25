@@ -24,11 +24,11 @@ body {
 h1 {
     width: 101vw;
     font-family: 'Quicksand', 'Roboto', sans-serif;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 300;
     text-align: center;
     margin: 0;
-    padding: 2vh;
+    padding: 0;
     z-index: 999;
     box-shadow: 1px 0 6px black;
     transition: all 500ms ease-in;
@@ -42,12 +42,39 @@ h1 {
     padding: 40vh 0;
     box-shadow: none;
     transition: all 500ms ease-out;
-}    
-.content {
-    position: relative;
-    /* margin: 1vh 2vh;
-    padding: 0; */
+} 
+#usr {
+    display: none;
+    transition: all 500ms ease-out;
 }
+
+/* Main Content */
+#content {
+    position: relative;
+}
+
+/* Auth Styling */
+#validation {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+#validation form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20vh 20vw;
+}
+input {
+    height: 1.5em;
+}
+button {
+    margin-top: 10px;
+    width: 35%;
+    height: 2em;
+}
+
+/* Thread styling */
 #thread {
     position: relative;
     display: block;
@@ -56,8 +83,6 @@ h1 {
     left: 0;
     height: 100vh;
 }
-
-/* Thread styling */
 ul {
     padding: 0;
     display: flex;
