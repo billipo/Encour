@@ -26,7 +26,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="main.css" >
-    <link rel="manifest" href="/manifest.json" >
+    <link rel="manifest" href="../manifest.json" >
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/apple-touch-icon-57x57.png" >
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/apple-touch-icon-114x114.png" >
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
@@ -50,28 +50,22 @@
     <title>ENCOUR App</title>
 </head>
 <body>
-    <!--<h1 class="splash">ENCOUR</h1>-->
-    <div class="content">
+    <h1 class="splash">ENCOUR<div id="usr">USER</div></h1>
+    <div id="content">
         <div id="validation">
             <form>
-                Email:<br>
-                <input type="text" id="email"><br>
-                Password:<br>
-                <input type="text" id="password"><br><br>
-                <button id="btnLogIn">
-                    Log In
-                </button>
-                <button id="btnSignUp">
-                    Sign Up
-                </button>
-                <button id="btnLogOut">
-                    Log Out 
-                </button>
-            <div id="usr">None</div>
+                <label for="email">Email</label>
+                <input type="text" id="email">
+                <label for="password">Password</label>
+                <input type="text" id="password">
+                <button id="btnLogIn">Log In</button>
+                <button id="btnSignUp">Sign Up</button>
+                <button id="btnLogOut">Log Out</button>
+            </form>
         </div>
         <div id="thread">
             <ul>
-                <!-- Will be deleted once there is data to inject -->
+                <!-- Will be deleted once there is data to inject
                 <li class="mine">
                     <div class="square"></div>
                     <h2>Drink 64oz of water by 7pm</h2>
@@ -86,15 +80,15 @@
                     <div class="square"></div>
                     <h2>Run Sundays @ 9:00 AM</h2>
                     <div class="arrow"></div>
-                </li>
+                </li> -->
             </ul>
         </div>
         <div id="messages">
              <ul>
-                <li class="msg msg-mine">You can do it! Brushing and flossing before 9:00 promotes peaceful sleep. (I may have made that up)</li>
+                <!-- <li class="msg msg-mine">You can do it! Brushing and flossing before 9:00 promotes peaceful sleep. (I may have made that up)</li>
                 <li class="msg msg-theirs">I struggled but it's done. Thanks.</li>
                 <li class="msg msg-mine">I hope you have had a good day so far. Give those pearly whites some care and you'll thank yourself.</li>
-                <li class="msg msg-theirs">Sorry, for the delay. Thanks, thanks, thanks.</li>
+                <li class="msg msg-theirs">Sorry, for the delay. Thanks, thanks, thanks.</li> -->
             </ul>
         </div>
     </div>

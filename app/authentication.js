@@ -4,9 +4,9 @@ const thread = document.getElementById('thread');
 const btnSignUp = document.getElementById('btnSignUp');
 const btnLogIn = document.getElementById('btnLogIn');
 const btnLogOut = document.getElementById('btnLogOut');
-const account;
-const reciever;
-const text;
+const account = '';
+const reciever = '';
+const text = '';
 var db = firebase.firestore();
 db.collection("users").add({
     to: reciever,
@@ -24,7 +24,9 @@ btnLogIn.addEventListener('click', () => {
   const email = document.getElementById('email').value;
     if(users.has(email)){
         validation.style.display = 'none';
+        validation.style.zIndex = 0;
         thread.style.display = 'initial';
+        thread.style.zIndex = 999;
         account = email;
     }
     else{
@@ -40,9 +42,11 @@ btnSignUp.addEventListener('click', () => {
     }
     else{
         users.add(email);
-        validation.style.display = 'none';
-        thread.style.display = 'initial';
         account = email;
+        validation.style.display = 'none';
+        validation.style.zIndex = 0;
+        thread.style.display = 'initial';
+        thread.style.zIndex = 999;
     }
 });
 

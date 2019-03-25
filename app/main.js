@@ -9,7 +9,10 @@ const auth = firebase.auth();
 window.onload = () => {
   setTimeout(()=> {
     let e = document.querySelector('.splash');
-    e.classList.remove('splash');
+    if (e.classList.contains('splash')) {
+      e.classList.remove('splash');
+      document.getElementById('usr').style.display = 'block';
+    };
   },4000)
 };
 
