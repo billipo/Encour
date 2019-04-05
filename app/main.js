@@ -1,4 +1,4 @@
-const thread = document.getElementById('thread').querySelector('li');
+const thread = document.getElementById('thread').querySelector('ul');
 const messages = document.getElementById('messages');
 const btnSignUp = document.getElementById('btnSignUp');
 const btnLogIn = document.getElementById('btnLogIn');
@@ -37,8 +37,7 @@ const newGoalBtn = document.getElementById('new-goal-btn');
 const newGoalForm = document.getElementById('new-goal-form');
 
 newGoalBtn.addEventListener('click', () => {
-  newGoalForm.classList.toggle('show');
-  console.log(newGoalForm);
+  newGoalForm.classList.add('show');
 })
 
 
