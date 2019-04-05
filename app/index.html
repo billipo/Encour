@@ -1,54 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-       
-     <!-- Firebase App is always required and must be first -->
-     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
-     <!-- Add firebase services -->
-     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
-     <!--Initialize firebase-->
-     <script src="/__/firebase/init.js"></script>
-     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
-     <script>
-       // Initialize Firebase
-       var config = {
-         apiKey: "AIzaSyCSYcQkabRrVNxUF4AqcinBQ5DHuqOja1E",
-         authDomain: "encour-7fc2b.firebaseapp.com",
-         databaseURL: "https://encour-7fc2b.firebaseio.com",
-         projectId: "encour-7fc2b",
-         storageBucket: "encour-7fc2b.appspot.com",
-         messagingSenderId: "403920884130"
-       };
-       firebase.initializeApp(config);
-     </script>
 
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="main.css" >
-    <link rel="manifest" href="../manifest.json" >
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/apple-touch-icon-57x57.png" >
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/apple-touch-icon-114x114.png" >
+    <link rel="stylesheet" href="main.css">
+    <link rel="manifest" href="../manifest.json">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144x144.png" >
-    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/img/apple-touch-icon-60x60.png" >
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/apple-touch-icon-120x120.png" >
-    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/img/apple-touch-icon-76x76.png" >
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/apple-touch-icon-152x152.png" >
-    <link rel="icon" type="image/png" href="/img/favicon-196x196.png" sizes="196x196" >
-    <link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96" >
-    <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32" >
-    <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16" >
-    <link rel="icon" type="image/png" href="/img/favicon-128.png" sizes="128x128" >
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/apple-touch-icon-152x152.png">
+    <link rel="icon" type="image/png" href="/img/favicon-196x196.png" sizes="196x196">
+    <link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/img/favicon-128.png" sizes="128x128">
     <meta name="application-name" content="Encour App">
-    <meta name="msapplication-TileColor" content="#74CFEC" >
-    <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" >
-    <meta name="msapplication-square70x70logo" content="/img/mstile-70x70.png" >
-    <meta name="msapplication-square150x150logo" content="/img/mstile-150x150.png" >
-    <meta name="msapplication-wide310x150logo" content="/img/mstile-310x150.png" >
-    <meta name="msapplication-square310x310logo" content="/img/mstile-310x310.png" >
+    <meta name="msapplication-TileColor" content="#74CFEC">
+    <meta name="msapplication-TileImage" content="/img/mstile-144x144.png">
+    <meta name="msapplication-square70x70logo" content="/img/mstile-70x70.png">
+    <meta name="msapplication-square150x150logo" content="/img/mstile-150x150.png">
+    <meta name="msapplication-wide310x150logo" content="/img/mstile-310x150.png">
+    <meta name="msapplication-square310x310logo" content="/img/mstile-310x310.png">
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+    <!-- Firebase App is always required and must be first -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+    <!-- Add firebase services -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+    <!--Initialize firebase-->
+    <!-- <script src="/__/firebase/init.js"></script> -->
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCSYcQkabRrVNxUF4AqcinBQ5DHuqOja1E",
+            authDomain: "encour-7fc2b.firebaseapp.com",
+            databaseURL: "https://encour-7fc2b.firebaseio.com",
+            projectId: "encour-7fc2b",
+            storageBucket: "encour-7fc2b.appspot.com",
+            messagingSenderId: "403920884130"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="main.js" defer></script>
+    <script src="authentication.js" defer></script>
     <title>ENCOUR App</title>
 </head>
+
 <body>
     <h1 class="splash">ENCOUR<div id="usr">USER</div><button id="new-goal-btn">+</button></h1>
     <div id="content">
@@ -74,24 +77,24 @@
             </ul>
         </div>
         <div id="messages">
-             <ul>
+            <ul>
                 <!-- Example message list items
                 <li class="msg msg-mine">You can do it! Brushing and flossing before 9:00 promotes peaceful sleep. (I may have made that up)</li>
                 <li class="msg msg-theirs">I struggled but it's done. Thanks.</li> -->
             </ul>
         </div>
+        <div id="new-goal-form">
+            <form>
+                <label for="title">Title</label>
+                <input type="text" name="title">
+                <label for="goal-date">Data</label>
+                <input type="date" name="goal-date">
+                <label for="goal-time">Time</label>
+                <input type="time" name="goal-time">
+            </form>
+        </div>
     </div>
-    <div id="new-goal-form">
-        <form>
-            <label for="title">Title</label>
-            <input type="text" name="title">
-            <label for="goal-date">Data</label>
-            <input type="date" name="goal-date">
-            <label for="goal-time">Time</label>
-            <input type="time" name="goal-time">
-        </form>
-    </div>
-    <script src="main.js" async defer></script>
-    <script src="authentication.js" async defer></script>
+
 </body>
+
 </html>
