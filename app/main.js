@@ -39,12 +39,3 @@ const newGoalForm = document.getElementById('new-goal-form');
 newGoalBtn.addEventListener('click', () => {
   newGoalForm.classList.add('show');
 })
-
-
-
-
-
-
-
-
-
