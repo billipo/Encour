@@ -49,12 +49,12 @@ h1 {
     transition: all 500ms ease-out;
 }
 
-/* Main Content */
+/*---   Main Content   ---*/
 #content {
     position: relative;
 }
 
-/* Auth Styling */
+/*---   Auth Styling  ---*/
 #validation {
     display: flex;
     flex-direction: column;
@@ -64,7 +64,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20vh 20vw;
+    padding: 20vh 10vw;
 }
 input {
     height: 1.5em;
@@ -75,10 +75,11 @@ button {
     height: 2em;
 }
 
-/* Thread styling */
+/*---   Thread styling   ---*/
 #thread {
-    position: relative;
-    display: block;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
     z-index: 2;
     top: 0;
     left: 0;
@@ -118,7 +119,7 @@ h2 {
     float: right;
 }
 
-/* Message styling */
+/*---   Message styling   ---*/
 #messages {
     position: relative;
     display: none;
@@ -153,21 +154,20 @@ h2 {
     border-radius: 8px;
 }
 
-/* New Goal Form */
+/*---   New Goal Form   ---*/
 #new-goal-form {
     position: absolute;
-    left: 35%;
-    top: 35%;
     box-shadow: 0 0 6px #74CFEC;
     border-radius: 8px;
-    display: none;
-    /* z-index: 9999; */
+    display: flex;
+    z-index: 0;
+    /* opacity: 0; */
     flex-direction: column;
     background: #74CFEC11;
-    /* justify-content: flex-start; */
+    align-items: center;
     margin: 0;
     width: 30%;
-    /* min-width: 14em; */
+    min-width: 14em;
     /* height: 14em; */
 }
 #new-goal-form form {
@@ -177,8 +177,9 @@ h2 {
     padding: 2em 2em;
 }
 
-#new-goal-form .show {
-    display: flex;
+.show {
+    z-index: 1000;
+    opacity: 1;
 }
 #new-goal-btn {
     width: 3em;
