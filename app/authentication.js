@@ -1,9 +1,9 @@
 var users = new Set();
 const validation = document.getElementById('validation');
-const thread = document.getElementById('thread');
-const btnSignUp = document.getElementById('btnSignUp');
-const btnLogIn = document.getElementById('btnLogIn');
-const btnLogOut = document.getElementById('btnLogOut');
+// const thread = document.getElementById('thread');
+// const btnSignUp = document.getElementById('btnSignUp');
+// const btnLogIn = document.getElementById('btnLogIn');
+// const btnLogOut = document.getElementById('btnLogOut');
 const account = '';
 const reciever = '';
 const text = '';
@@ -11,7 +11,7 @@ var db = firebase.firestore();
 db.collection("users").add({
     to: reciever,
     from: account,
-    message: test
+    message: text
 })
 .then(function(docRef) {
     console.log("Document written with ID: ", docRef.id);
